@@ -162,8 +162,8 @@ Una vez que ambos servidores (Django backend y React frontend) estén funcionand
 
 ### **6. Consideraciones Adicionales**
 
-* **Rutas de la API:** El frontend se comunica con el backend a través de `http://127.0.0.1:8000/api/`. Asegúrate de que el backend esté ejecutándose en este puerto.
-* **Base de Datos:** Por defecto, Django usa SQLite para desarrollo, y la base de datos `db.sqlite3` se crea en la carpeta `nutritrack_project`. Puedes borrarla y ejecutar `python manage.py migrate` de nuevo si quieres reiniciar la base de datos.
+* **Rutas de la API:** El frontend se comunica con el backend a través de `http://127.0.0.1:8000/api/`.
+* **Base de Datos:** Por defecto, Django usa SQLite para desarrollo, y la base de datos `db.sqlite3` se crea en la carpeta `nutritrack_project`. 
 * **Autenticación:** La aplicación utiliza JWT (JSON Web Tokens) para la autenticación de usuarios.
 * **Diseño Responsivo:** Aunque el enfoque principal no fue el diseño 100% responsivo para todos los dispositivos, la estructura se ha mejorado para una mejor visualización en pantallas de escritorio.
 
