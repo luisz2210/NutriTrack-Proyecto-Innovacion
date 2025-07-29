@@ -1,0 +1,266 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f0f8ff;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+#root {
+  max-width: 800px;
+  width: 95%;
+  margin: 20px auto;
+  padding: 30px;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
+}
+
+#root:hover {
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
+
+header {
+  color: #2c3e50;
+  padding-bottom: 20px;
+  margin-bottom: 30px;
+  border-bottom: 2px solid #e0e0e0;
+  text-align: center;
+}
+
+h1 {
+  font-size: 2.5em;
+  margin-bottom: 10px;
+}
+
+h2, h3 {
+  color: #34495e;
+  margin-top: 25px;
+  margin-bottom: 15px;
+}
+
+p {
+  color: #555;
+  line-height: 1.6;
+}
+
+button {
+  background-color: #3498db;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #2980b9;
+}
+
+/* Estilos para el contenedor principal de las secciones*/
+
+main > div {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  align-items: flex-start;
+}
+
+/* Estilos para contenedores de sección individuales (perfil, registro, ingesta) */
+.section-container {
+  width: 100%;
+  padding: 20px;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  background-color: #ffffff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+
+/* Estilos para formularios verticales */
+.vertical-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Estilos de inputs y selectores generales */
+input, select {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 16px;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 300px;
+}
+
+input::placeholder, select {
+  color: #aaa;
+}
+
+input:focus, select:focus {
+  border-color: #3498db;
+  outline: none;
+  box-shadow: 0 0 8px rgba(52, 152, 219, 0.3);
+}
+
+/* Estilos para el formulario de añadir alimentos - Asegura que los campos se apilen */
+.food-item-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.food-item-form .form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.food-item-form label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #34495e;
+}
+
+.food-item-form button {
+    margin-top: 10px;
+    max-width: 300px;
+}
+
+/* Estilos para el componente de registro de peso */
+.weight-entry-container input[type="number"] {
+  width: 150px;
+  margin-right: 10px;
+}
+
+/* Estilos para los elementos de la lista (historial de peso, lista de alimentos) */
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin-top: 15px;
+}
+
+li {
+  background: #ecf0f1;
+  padding: 15px;
+  margin-bottom: 10px;
+  border-radius: 6px;
+  border-left: 5px solid #3498db;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+/* Clases específicas para los elementos con botón de eliminar */
+.weight-entry-item, .food-item-item, .daily-intake-item {
+}
+
+
+/* Estilos para el botón de eliminar - ¡ASEGÚRATE DE QUE ESTO ESTÉ EXACTAMENTE ASÍ! */
+.delete-button {
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.9em;
+  white-space: nowrap;
+  flex-shrink: 0;
+  margin-left: auto;
+}
+
+.delete-button:hover {
+  background-color: #c0392b;
+}
+
+/* Estilos para el componente de ingesta diaria */
+.daily-intake-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+}
+
+.daily-intake-form select {
+  width: 200px;
+  flex-grow: 1;
+  max-width: none;
+}
+
+.daily-intake-form input[type="number"] {
+  width: 100px;
+  flex-grow: 1;
+}
+
+li strong {
+  font-weight: bold;
+  color: #333;
+}
+
+/* Estilos específicos para el perfil */
+.profile-details p {
+  background-color: #f9f9f9;
+  padding: 10px;
+  border-radius: 4px;
+  border-left: 3px solid #3498db;
+  margin-bottom: 8px;
+}
+
+.profile-details p strong {
+  color: #2c3e50;
+  margin-right: 5px;
+}
+
+pre {
+  background-color: #f9f9f9;
+  padding: 15px;
+  border: 1px solid #eee;
+  border-radius: 4px;
+  overflow-x: auto;
+  font-size: 0.9em;
+  white-space: pre-wrap;
+}
+
+hr {
+  border: 0;
+  height: 1px;
+  background: #e0e0e0;
+  margin: 20px 0;
+}
+
+/* Estilos para el contenedor de registro e inicio de sesión */
+/* Este estilo se aplica cuando el usuario NO está autenticado */
+main > div[style*="display: flex"] {
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+/* Estilos para el título de la aplicación */
+.app-title {
+  font-family: 'Georgia', serif;
+  font-weight: bold;
+  color: #3498db;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+  letter-spacing: 2px;
+  padding: 5px 10px;
+  background-color: #ecf0f1;
+  border-radius: 8px;
+  display: inline-block;
+}
+
+.app-title:hover {
+  color: #2980b9;
+  background-color: #e0e0e0;
+  transition: all 0.3s ease;
+}
